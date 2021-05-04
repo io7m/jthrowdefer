@@ -44,7 +44,7 @@ tracker.throwIfNecessary();
 
 The above code will execute `doIO1`, `doIO2`, and `doIO3`, catching each
 exception if any are raised. The `throwIfNecessary` method will throw
-whichever of `e1`, `e2`, or `e3` was caught first, with either of the other
+whichever of `e1`, `e2`, or `e3` was caught first, with any/all of the other
 two exceptions added to the thrown exception as a _suppressed exception_.
 
 Concretely, if all of `doIO1`, `doIO2`, and `doIO3` throw exceptions, the
