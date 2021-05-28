@@ -59,6 +59,27 @@ public final class ExceptionTracker<T extends Exception>
   }
 
   /**
+   * Execute the given procedure, catching any exceptions raised and passing
+   * them to {@link #addException(Exception)}.
+   *
+   * @param execute The procedure to execute
+   *
+   * @since 1.1.0
+   */
+
+  public void catching(
+    final ExceptionalProcedureType<T> execute)
+  {
+    Objects.requireNonNull(execute, "execute");
+
+    try {
+      execute.execute();
+    } catch (final Exception e) {
+      this.addException((T) e);
+    }
+  }
+
+  /**
    * Throw an exception of {@link #addException(Exception)} has been called
    * at least once.
    *
