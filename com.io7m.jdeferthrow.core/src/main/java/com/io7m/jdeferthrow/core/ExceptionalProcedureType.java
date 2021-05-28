@@ -1,5 +1,5 @@
 /*
- * Copyright © 2021 Mark Raynsford <code@io7m.com> http://io7m.com
+ * Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -14,13 +14,24 @@
  * IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-/**
- * Defer and combine exceptions (Core)
- */
-
-@Export
-@Version("1.1.0")
 package com.io7m.jdeferthrow.core;
 
-import org.osgi.annotation.bundle.Export;
-import org.osgi.annotation.versioning.Version;
+/**
+ * A procedure that might raise an exception.
+ *
+ * @param <T> The precise type of exceptions raised
+ *
+ * @since 1.1.0
+ */
+
+public interface ExceptionalProcedureType<T extends Exception>
+{
+  /**
+   * Execute the procedure.
+   *
+   * @throws T If required
+   */
+
+  void execute()
+    throws T;
+}
