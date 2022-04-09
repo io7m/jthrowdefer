@@ -16,7 +16,7 @@
   <packaging>jar</packaging>
   <name>com.io7m.jdeferthrow.tests</name>
   <description>Defer and combine exceptions (Test suite)</description>
-  <url>https://www.github.com/io7m/jdeferthrow</url>
+  <url>https://www.io7m.com/software/jdeferthrow</url>
 
   <properties>
     <mdep.analyze.skip>true</mdep.analyze.skip>
