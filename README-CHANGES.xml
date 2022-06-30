@@ -4,9 +4,14 @@
     <c:release date="2021-05-04T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jdeferthrow" version="1.0.0">
       <c:changes/>
     </c:release>
-    <c:release date="2021-05-28T13:16:52+00:00" is-open="false" ticket-system="com.github.io7m.jdeferthrow" version="1.1.0">
+    <c:release date="2021-05-28T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jdeferthrow" version="1.1.0">
       <c:changes>
         <c:change date="2021-05-28T00:00:00+00:00" summary="Add catching()"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-06-30T15:32:15+00:00" is-open="false" ticket-system="com.github.io7m.jdeferthrow" version="1.2.0">
+      <c:changes>
+        <c:change date="2022-06-30T00:00:00+00:00" summary="The project now exports named JPMS modules instead of just automatic modules."/>
       </c:changes>
     </c:release>
   </c:releases>
