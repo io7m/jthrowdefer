@@ -7,12 +7,12 @@ jdeferthrow
 
 ![jdeferthrow](./src/site/resources/jdeferthrow.jpg?raw=true)
 
-| JVM             | Platform | Status |
-|-----------------|----------|--------|
-| OpenJDK LTS     | Linux    | [![Build (OpenJDK LTS, Linux)](https://img.shields.io/github/workflow/status/io7m/jdeferthrow/main-openjdk_lts-linux)](https://github.com/io7m/jdeferthrow/actions?query=workflow%3Amain-openjdk_lts-linux) |
-| OpenJDK Current | Linux    | [![Build (OpenJDK Current, Linux)](https://img.shields.io/github/workflow/status/io7m/jdeferthrow/main-openjdk_current-linux)](https://github.com/io7m/jdeferthrow/actions?query=workflow%3Amain-openjdk_current-linux)
-| OpenJDK Current | Windows  | [![Build (OpenJDK Current, Windows)](https://img.shields.io/github/workflow/status/io7m/jdeferthrow/main-openjdk_current-windows)](https://github.com/io7m/jdeferthrow/actions?query=workflow%3Amain-openjdk_current-windows)
-
+| JVM | Platform | Status |
+|-----|----------|--------|
+| OpenJDK (Temurin) Current | Linux | [![Build (OpenJDK (Temurin) Current, Linux)](https://img.shields.io/github/workflow/status/io7m/jdeferthrow/main.linux.temurin.current)](https://github.com/io7m/jdeferthrow/actions?query=workflow%3Amain.linux.temurin.current)|
+| OpenJDK (Temurin) LTS | Linux | [![Build (OpenJDK (Temurin) LTS, Linux)](https://img.shields.io/github/workflow/status/io7m/jdeferthrow/main.linux.temurin.lts)](https://github.com/io7m/jdeferthrow/actions?query=workflow%3Amain.linux.temurin.lts)|
+| OpenJDK (Temurin) Current | Windows | [![Build (OpenJDK (Temurin) Current, Windows)](https://img.shields.io/github/workflow/status/io7m/jdeferthrow/main.windows.temurin.current)](https://github.com/io7m/jdeferthrow/actions?query=workflow%3Amain.windows.temurin.current)|
+| OpenJDK (Temurin) LTS | Windows | [![Build (OpenJDK (Temurin) LTS, Windows)](https://img.shields.io/github/workflow/status/io7m/jdeferthrow/main.windows.temurin.lts)](https://github.com/io7m/jdeferthrow/actions?query=workflow%3Amain.windows.temurin.lts)|
 The `jdeferthrow` package implements a trivial API for combining multiple 
 exceptions over a series of statements.
 
@@ -44,7 +44,7 @@ tracker.throwIfNecessary();
 
 The above code will execute `doIO1`, `doIO2`, and `doIO3`, catching each
 exception if any are raised. The `throwIfNecessary` method will throw
-whichever of `e1`, `e2`, or `e3` was caught first, with any/all of the other
+whichever of `e1`, `e2`, or `e3` was caught first, with either of the other
 two exceptions added to the thrown exception as a _suppressed exception_.
 
 Concretely, if all of `doIO1`, `doIO2`, and `doIO3` throw exceptions, the
