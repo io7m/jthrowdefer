@@ -14,6 +14,7 @@ jdeferthrow
 | OpenJDK (Temurin) Current | Windows | [![Build (OpenJDK (Temurin) Current, Windows)](https://img.shields.io/github/actions/workflow/status/io7m-com/jdeferthrow/main.windows.temurin.current.yml)](https://www.github.com/io7m-com/jdeferthrow/actions?query=workflow%3Amain.windows.temurin.current)|
 | OpenJDK (Temurin) LTS | Windows | [![Build (OpenJDK (Temurin) LTS, Windows)](https://img.shields.io/github/actions/workflow/status/io7m-com/jdeferthrow/main.windows.temurin.lts.yml)](https://www.github.com/io7m-com/jdeferthrow/actions?query=workflow%3Amain.windows.temurin.lts)|
 
+### Description
 
 The `jdeferthrow` package implements a trivial API for combining multiple
 exceptions over a series of statements.

@@ -1,4 +1,5 @@
 
+### Description
 
 The `jdeferthrow` package implements a trivial API for combining multiple
 exceptions over a series of statements.
