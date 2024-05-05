@@ -9,9 +9,16 @@
         <c:change date="2021-05-28T00:00:00+00:00" summary="Add catching()"/>
       </c:changes>
     </c:release>
-    <c:release date="2022-06-30T15:32:15+00:00" is-open="false" ticket-system="com.github.io7m.jdeferthrow" version="1.2.0">
+    <c:release date="2022-06-30T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jdeferthrow" version="1.2.0">
       <c:changes>
         <c:change date="2022-06-30T00:00:00+00:00" summary="The project now exports named JPMS modules instead of just automatic modules."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2024-05-05T18:14:05+00:00" is-open="false" ticket-system="com.github.io7m.jdeferthrow" version="1.3.0">
+      <c:changes>
+        <c:change date="2024-04-19T00:00:00+00:00" summary="Update ch.qos.logback:logback-classic:1.4.14 → 1.5.6."/>
+        <c:change date="2024-04-19T00:00:00+00:00" summary="Update org.slf4j:slf4j-api:2.0.10 → 2.0.13."/>
+        <c:change date="2024-04-19T00:00:00+00:00" summary="Update junit.version:5.10.1 → 5.10.2."/>
       </c:changes>
     </c:release>
   </c:releases>
