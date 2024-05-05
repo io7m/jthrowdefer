@@ -2,18 +2,21 @@ jdeferthrow
 ===
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.io7m.jdeferthrow/com.io7m.jdeferthrow.svg?style=flat-square)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.io7m.jdeferthrow%22)
-[![Maven Central (snapshot)](https://img.shields.io/nexus/s/https/oss.sonatype.org/com.io7m.jdeferthrow/com.io7m.jdeferthrow.svg?style=flat-square)](https://oss.sonatype.org/content/repositories/snapshots/com/io7m/jdeferthrow/)
-[![Codecov](https://img.shields.io/codecov/c/github/io7m/jdeferthrow.svg?style=flat-square)](https://codecov.io/gh/io7m/jdeferthrow)
+[![Maven Central (snapshot)](https://img.shields.io/nexus/s/com.io7m.jdeferthrow/com.io7m.jdeferthrow?server=https%3A%2F%2Fs01.oss.sonatype.org&style=flat-square)](https://s01.oss.sonatype.org/content/repositories/snapshots/com/io7m/jdeferthrow/)
+[![Codecov](https://img.shields.io/codecov/c/github/io7m-com/jdeferthrow.svg?style=flat-square)](https://codecov.io/gh/io7m-com/jdeferthrow)
 
-![jdeferthrow](./src/site/resources/jdeferthrow.jpg?raw=true)
+![com.io7m.jdeferthrow](./src/site/resources/jdeferthrow.jpg?raw=true)
 
-| JVM             | Platform | Status |
-|-----------------|----------|--------|
-| OpenJDK LTS     | Linux    | [![Build (OpenJDK LTS, Linux)](https://img.shields.io/github/workflow/status/io7m/jdeferthrow/main-openjdk_lts-linux)](https://github.com/io7m/jdeferthrow/actions?query=workflow%3Amain-openjdk_lts-linux) |
-| OpenJDK Current | Linux    | [![Build (OpenJDK Current, Linux)](https://img.shields.io/github/workflow/status/io7m/jdeferthrow/main-openjdk_current-linux)](https://github.com/io7m/jdeferthrow/actions?query=workflow%3Amain-openjdk_current-linux)
-| OpenJDK Current | Windows  | [![Build (OpenJDK Current, Windows)](https://img.shields.io/github/workflow/status/io7m/jdeferthrow/main-openjdk_current-windows)](https://github.com/io7m/jdeferthrow/actions?query=workflow%3Amain-openjdk_current-windows)
+| JVM | Platform | Status |
+|-----|----------|--------|
+| OpenJDK (Temurin) Current | Linux | [![Build (OpenJDK (Temurin) Current, Linux)](https://img.shields.io/github/actions/workflow/status/io7m-com/jdeferthrow/main.linux.temurin.current.yml)](https://www.github.com/io7m-com/jdeferthrow/actions?query=workflow%3Amain.linux.temurin.current)|
+| OpenJDK (Temurin) LTS | Linux | [![Build (OpenJDK (Temurin) LTS, Linux)](https://img.shields.io/github/actions/workflow/status/io7m-com/jdeferthrow/main.linux.temurin.lts.yml)](https://www.github.com/io7m-com/jdeferthrow/actions?query=workflow%3Amain.linux.temurin.lts)|
+| OpenJDK (Temurin) Current | Windows | [![Build (OpenJDK (Temurin) Current, Windows)](https://img.shields.io/github/actions/workflow/status/io7m-com/jdeferthrow/main.windows.temurin.current.yml)](https://www.github.com/io7m-com/jdeferthrow/actions?query=workflow%3Amain.windows.temurin.current)|
+| OpenJDK (Temurin) LTS | Windows | [![Build (OpenJDK (Temurin) LTS, Windows)](https://img.shields.io/github/actions/workflow/status/io7m-com/jdeferthrow/main.windows.temurin.lts.yml)](https://www.github.com/io7m-com/jdeferthrow/actions?query=workflow%3Amain.windows.temurin.lts)|
 
-The `jdeferthrow` package implements a trivial API for combining multiple 
+### Description
+
+The `jdeferthrow` package implements a trivial API for combining multiple
 exceptions over a series of statements.
 
 ### Usage
@@ -44,7 +47,7 @@ tracker.throwIfNecessary();
 
 The above code will execute `doIO1`, `doIO2`, and `doIO3`, catching each
 exception if any are raised. The `throwIfNecessary` method will throw
-whichever of `e1`, `e2`, or `e3` was caught first, with any/all of the other
+whichever of `e1`, `e2`, or `e3` was caught first, with either of the other
 two exceptions added to the thrown exception as a _suppressed exception_.
 
 Concretely, if all of `doIO1`, `doIO2`, and `doIO3` throw exceptions, the

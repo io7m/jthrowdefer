@@ -85,4 +85,46 @@ public final class ExceptionTrackerTest
     assertEquals(ex0.getSuppressed()[1], ex2);
     assertEquals(2, ex0.getSuppressed().length);
   }
+
+  /**
+   * If exceptions are caught, the thrown exception is the first exception
+   * with the rest available as suppressed exceptions.
+   *
+   * @throws Exception On errors
+   */
+
+  @Test
+  public void test_Catching_Exceptions_AllAreCaught()
+    throws Exception
+  {
+    final var tracker = new ExceptionTracker<Exception>();
+
+    final var ex0 =
+      new IOException("Exception 0");
+    final var ex1 =
+      new IllegalStateException("Exception 1");
+    final var ex2 =
+      new InterruptedException("Exception 2");
+
+    tracker.catching(() -> {
+      throw ex0;
+    });
+    tracker.catching(() -> {
+      throw ex1;
+    });
+    tracker.catching(() -> {
+      throw ex2;
+    });
+    tracker.catching(() -> {
+      // Do nothing!
+    });
+
+    final var thrown =
+      Assertions.assertThrows(Exception.class, tracker::throwIfNecessary);
+
+    assertEquals(ex0, thrown);
+    assertEquals(ex0.getSuppressed()[0], ex1);
+    assertEquals(ex0.getSuppressed()[1], ex2);
+    assertEquals(2, ex0.getSuppressed().length);
+  }
 }
